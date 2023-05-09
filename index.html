@@ -105,5 +105,23 @@
     </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+        let list = document.querySelectorAll('.nav li');
+        function active()
+        {
+            list.forEach((i) =>
+            i.classList.remove('active'));
+            this.classList.add('active');
+        }
+        list.forEach((i) =>
+        i.addEventListener('click',active));
+         
+        let menuToggle = document.querySelector('.menuToggel');
+        let header = document.querySelector('header');
+        menuToggle.onclick =function()
+        {
+            header.classList.toggle('active');
+        }
+    </script>
 </body>
 </html

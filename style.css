@@ -8,13 +8,14 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif
 }
+
 header
 {
     position: fixed;
     top: 0%;
     left: 0%;
     padding: 20px 100px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,7 +102,7 @@ header
     position: relative;
     display: inline-block;
     font-size: 1.25em;
-    max-width: 230px;
+    max-width: 240px;
     background: #0ef;
     color: #222;
     text-align: center;
@@ -304,4 +305,157 @@ header
 {
   margin-top: 2rem;
   cursor: pointer;
+}
+
+/* now make it reponsive */
+@media (max-width: 900px)
+{
+  header
+  {
+    padding: 20px 50px;
+  }
+  #home 
+  {
+    padding: 150px 50px;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+  #home .content h2 
+  {
+    font-size: 4em;
+  }
+  .btn
+  {
+    max-width: 160px;
+    padding: 10px 20px;
+  }
+  #home .men
+  {
+    position: absolute;
+    height: 50vh;
+    right: 0;
+  }
+  .secText h2 
+  {
+    font-size: 2em;
+    text-align: center;
+  }
+  #services
+  #portofolio
+  #contact
+  {
+    padding: 100px 50px 50px;
+  }
+  #services .content
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .menuToggle
+  {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .menuToggle::before
+  {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-10px);
+    transition: 0.5s;
+    box-shadow: 0 10px #fff;
+  }
+  .menuToggle::after
+  {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: translateY(10px);
+    transition: 0.5s;
+  }
+  header.active .menuToggle::before
+  {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #fff;
+  } 
+  header.active .menuToggle::before
+  {
+    transform: translateY(0px) rotate(315sdeg);
+    box-shadow: 0 0 #fff;
+  } 
+  header ul 
+  {
+    display: none;
+  }
+  header.active ul 
+  {
+    position: fixed;
+    left: 0;
+    top: 84px;
+    width: 100%;
+    height: calc(100vh - 84px);
+    background: rgba(50,50,50,0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10000;
+    gap: 20px;
+  }
+  header.active ul li a 
+  {
+    font-size: 2em;
+  }
+}
+  @media (max-width: 700px)
+  {
+  #home .content h2 
+  {
+    font-size: 3em;
+  }
+  #home::before
+  {
+    width: 80vw;
+    height: 40vw;
+    border-top-right-radius: 80vw;
+    border-top-left-radius: 80vw;
+  }
+  #home .men
+  {
+    height: 40vh;
+  }
+  #services .content,
+  #portofolio .content,
+  #contact .content
+  {
+    grid-template-columns: repeat(1,1fr);
+  }
+  #contact .content a 
+  {
+    height: 80px;
+  }
+  #contact form {
+    display: flex;
+    flex-direction: column;
+  }
+  #contact form .input-box
+  {
+    flex-direction: column;
+    width: 100vw;
+  }
+  .contact form .input-box input,
+  .contact form textarea
+  {
+    width: 50%;
+    margin: .5rem 0;
+  }
+
 }
