@@ -401,7 +401,7 @@ header
     left: 0;
     top: 84px;
     width: 100%;
-    height: calc(100vh - 84px);
+    height: calc(100vh - 44vh);
     background: rgba(50,50,50,0.95);
     display: flex;
     justify-content: center;
