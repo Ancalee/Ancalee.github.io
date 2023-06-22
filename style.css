@@ -101,7 +101,7 @@ header
  {
     position: relative;
     display: inline-block;
-    font-size: 1.25em;
+    font-size: 1.2em;
     max-width: 240px;
     background: #0ef;
     color: #222;
@@ -329,6 +329,7 @@ header
   }
   .btn
   {
+    font-size: 1rem;
     max-width: 160px;
     padding: 10px 20px;
   }
