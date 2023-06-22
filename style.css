@@ -310,6 +310,9 @@ header
 /* now make it reponsive */
 @media (max-width: 900px)
 {
+  body{
+    max-width: 100vw;
+  }
   header
   {
     padding: 20px 50px;
@@ -387,6 +390,16 @@ header
     box-shadow: 0 0 #fff;
   } 
   header.active .menuToggle::before
+  {
+    transform: translateY(0px) rotate(315sdeg);
+    box-shadow: 0 0 #fff;
+  } 
+  header.active .menuToggle::after
+  {
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 #fff;
+  } 
+  header.active .menuToggle::after
   {
     transform: translateY(0px) rotate(315sdeg);
     box-shadow: 0 0 #fff;
