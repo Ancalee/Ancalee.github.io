@@ -391,6 +391,16 @@ header
     transform: translateY(0px) rotate(315sdeg);
     box-shadow: 0 0 #fff;
   } 
+   header.active .menuToggle::after
+  {
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 #fff;
+  } 
+  header.active .menuToggle::after
+  {
+    transform: translateY(0px) rotate(315sdeg);
+    box-shadow: 0 0 #fff;
+  } 
   header ul 
   {
     display: none;
